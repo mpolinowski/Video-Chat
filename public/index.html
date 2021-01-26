@@ -2,23 +2,26 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Video Chat Application</title>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.3/socket.io.js"></script>
-        <link href="/styles.css" rel="stylesheet" />
+        <title>INSTAR Company Video Chat</title>
+        <link href="/styles/styles.css" rel="stylesheet" />
+        <link rel="icon" href="/static/favicon.ico">
     </head>
     <body>
+        <div class="flex-container banner">
+            <img class="logo" src="/static/InstarVision.png" />
+            <h2 class="text">INSTAR Company Video Chat</h2>
+        </div>
 
-        <div id="video-chat-lobby">
-            <h2 class="text">Video Chat Application</h2>
-            <input id="roomName" type="text" placeholder="Room Name" />
+        <div id="video-chat-lobby" class="flex-container">
+            <input id="roomName" type="text" placeholder="Type in a room name..." />
             <button id="join">Join</button>
         </div>
-        <div id="video-chat-room">
+        <div id="video-chat-room" class="flex-container">
             <video id="user-video"></video>
             <video id="peer-video"></video>
         </div>
 
     </body>
-    <script src="https://cdn.socket.io/socket.io-3.0.1.min.js"></script>
-    <script src="/chat.js"></script>
+    <script src="/js/socket.io.min.js"></script>
+    <script src="/js/chat.js"></script>
 </html>
